@@ -16,14 +16,15 @@ Smalltalk, Common Lisp и Perl 6. Moose надгражда над обектна
 на езика и в момента е най-добрият начин за разработката на обектно
 ориентирани програми за Perl 5.
 
-=head2 Classes
+=head2 Класове
 
-X<classes>
+X<класове>
 X<builtins; C<package>>
 
-A Moose object is a concrete instance of a I<class>, which is a template
-describing data and behavior specific to the object. Classes use packages
-(L<packages>) to provide namespaces:
+Един обект в Moose е конкретна инстанция на някой I<клас>, който
+представлява шаблон описващ данни и поведение специфично за
+обекта. Класовете използват пакети (L<packages>) за да предоставят
+пространства от имена (namespaces):
 
 =begin programlisting
 
@@ -34,10 +35,11 @@ describing data and behavior specific to the object. Classes use packages
 
 =end programlisting
 
-X<OO; instances>
+X<ОО; инстанции>
 
-This C<Cat> class I<appears> to do nothing, but that's all Moose needs to make
-a class. Create objects (or I<instances>) of the C<Cat> class with the syntax:
+Класът C<Cat> I<привидно> не прави нищо, но Moose има нужда само от
+толкова малко код за да направи клас. За да се направят обекти (или
+I<инстанции>) на класа C<Cat> трябва да се използват следните конструктори:
 
 =begin programlisting
 
@@ -46,13 +48,13 @@ a class. Create objects (or I<instances>) of the C<Cat> class with the syntax:
 
 =end programlisting
 
-Just as an arrow dereferences a reference, an arrow calls a method on an object
-or class.
+Стрелкичката се използва както за обръщане към стойността, сочена от
+референция, така и за да се извика метод на обект или клас.
 
-=head2 Methods
+=head2 Методи
 
-X<OO; methods>
-X<OO; invocants>
+X<ОО; методи>
+X<ОО; invocants>
 
 A I<method> is a function associated with a class. Just as functions belong to
 namespaces, so do methods belong to classes, with two differences. First, a
